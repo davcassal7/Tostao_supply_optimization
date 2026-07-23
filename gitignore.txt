@@ -1,0 +1,64 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.python-version
+
+# Empaquetado
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pruebas, cobertura y calidad
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Variables de entorno, credenciales y secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# IDE y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp
+*.temp
+~$*
+
+# CatBoost genera esta carpeta por defecto si allow_writing_files=True
+catboost_info/
+
+# Cache
+.cache/
+
+# Descomenta estas reglas si los datos originales NO pueden publicarse.
+# Si ya fueron versionados, usa: git rm --cached data/raw/*.csv
+# data/raw/*.csv
+# data/processed/*
+# !data/processed/.gitkeep
+
+# Los modelos y outputs se conservan en el repositorio para reproducibilidad
+# del caso técnico. Si exceden los límites de GitHub, usa Git LFS.

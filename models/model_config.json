@@ -1,0 +1,92 @@
+{
+  "nombre_configuracion": "6_lags",
+  "fecha_creacion_artefacto": "2026-07-23T16:33:02.557410",
+  "fecha_maxima_entrenamiento": "2024-03-25T00:00:00",
+  "lags": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "ventanas": [
+    2,
+    4
+  ],
+  "cuantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "variables_numericas": [
+    "precio_venta",
+    "costo_unitario",
+    "costo_almacenamiento",
+    "margen_unitario",
+    "margen_porcentual",
+    "tamano_tienda",
+    "semana_anio",
+    "indice_semana",
+    "producto_media_semana_anterior",
+    "tienda_media_semana_anterior",
+    "ventas_lag_1",
+    "ventas_lag_2",
+    "ventas_lag_3",
+    "ventas_lag_4",
+    "ventas_lag_6",
+    "ventas_media_2",
+    "ventas_std_2",
+    "ventas_min_2",
+    "ventas_max_2",
+    "proporcion_ceros_2",
+    "ventas_media_4",
+    "ventas_std_4",
+    "ventas_min_4",
+    "ventas_max_4",
+    "proporcion_ceros_4",
+    "tendencia_1_4"
+  ],
+  "variables_categoricas": [
+    "id_tienda",
+    "id_producto",
+    "ciudad"
+  ],
+  "orden_variables": [
+    "precio_venta",
+    "costo_unitario",
+    "costo_almacenamiento",
+    "margen_unitario",
+    "margen_porcentual",
+    "tamano_tienda",
+    "semana_anio",
+    "indice_semana",
+    "producto_media_semana_anterior",
+    "tienda_media_semana_anterior",
+    "ventas_lag_1",
+    "ventas_lag_2",
+    "ventas_lag_3",
+    "ventas_lag_4",
+    "ventas_lag_6",
+    "ventas_media_2",
+    "ventas_std_2",
+    "ventas_min_2",
+    "ventas_max_2",
+    "proporcion_ceros_2",
+    "ventas_media_4",
+    "ventas_std_4",
+    "ventas_min_4",
+    "ventas_max_4",
+    "proporcion_ceros_4",
+    "tendencia_1_4",
+    "id_tienda",
+    "id_producto",
+    "ciudad"
+  ],
+  "parametros_modelo": {
+    "iterations": 400,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "random_state": 42,
+    "loss_function": "Quantile"
+  }
+}

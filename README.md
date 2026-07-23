@@ -10,16 +10,31 @@ Este proyecto implementa una solución de **Machine Learning y Optimización de 
 supply-chain-optimization/
 │
 ├── data/                           # Archivos de datos de entrada y salida
-│   ├── ventas.csv                  # Histórico de ventas semanales
-│   ├── productos.csv               # Precios, costos unitarios y costos de almacenamiento
-│   ├── inventario.csv              # Niveles actuales de stock por tienda/producto
-│   └── plan_pedidos_recomendados.csv # Output generado con el plan de pedidos
+│   ├── raw/                        # Datos crudos de origen
+│   │   ├── ventas.csv              # Histórico de ventas semanales
+│   │   ├── productos.csv           # Precios, costos unitarios y costos de almacenamiento
+│   │   ├── inventario.csv          # Niveles actuales de stock por tienda/producto
+│   │   └── plan_pedidos_recomendados.csv # Output generado con el plan de pedidos
+│   └── processed/                  # Datos procesados y modulados
+│       └── panel_semanal.parquet   # Data modular procesada para modelado
 │
-├── models/                         # Binarios de los modelos entrenados por cuantil (.cbm)
+├── models/                         # Modelos y configuraciones
+│   ├── model_config.json           # Configuración de los modelos entrenados por cuantil
+│   └── *.cbm                       # Binarios de los modelos entrenados por cuantil
 │
 ├── notebooks/                      # Notebooks de exploración y experimentación
-│   ├── 01_eda_and_features.ipynb
-│   └── 02_experimentacion.ipynb
+│   ├── EDA.ipynb                   # Análisis exploratorio de datos
+│   └── Experimentación.ipynb       # Pruebas y entrenamiento de modelos
+│
+├── outputs/                        # Resultados, métricas y predicciones generadas
+│   ├── metrics/                    # Evaluaciones y métricas del modelo
+│   │   ├── comparacion_cuantiles.csv
+│   │   ├── comparacion_modelos_p50.csv
+│   │   └── metricas_experimentos.csv
+│   ├── predictions/                # Pronósticos y evaluaciones históricas
+│   │   ├── predicciones_backtesting.csv
+│   │   └── pronostico_semana_2024-04-01.csv
+│   └── pedidos_recomendados.csv    # Plan final de reabastecimiento recomendado
 │
 ├── src/                            # Módulos Python empaquetados
 │   ├── __init__.py
@@ -120,4 +135,4 @@ $$L_q(y, \hat{y}_q) = \max(q(y - \hat{y}_q), (q - 1)(y - \hat{y}_q))$$
 ---
 
 ## ✒️ Autor
-Proyecto desarrollado para el módulo de Optimización de Cadena de Suministro y Machine Learning Aplicado.
+Proyecto desarrollado para el módulo de Optimización de Cadena de Suministro y Machine Learning Aplicado por David Casiblanco Salgado.

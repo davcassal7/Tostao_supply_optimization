@@ -40,7 +40,7 @@ supply-chain-optimization/
 El pipeline consta de 5 etapas principales integradas en un flujo libre de **Data Leakage**:
 
 1. **Garantía de Continuidad del Panel (`feature_engineering.py`):**
-   Crea la grilla completa de $Semanas 	imes Tiendas 	imes Productos$. Las combinaciones sin ventas registradas se rellenan explícitamente con 0 para reflejar periodos de nula demanda.
+   Crea la grilla completa de $Semanas - Tiendas-Productos(SKUs)$. Las combinaciones sin ventas registradas se rellenan explícitamente con 0 para reflejar periodos de nula demanda.
 
 2. **Feature Engineering Anti-Leakage:**
    - **Lags:** $t-1, t-2, t-4$.

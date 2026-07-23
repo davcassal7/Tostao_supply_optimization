@@ -11,10 +11,10 @@ supply-chain-optimization/
 │
 ├── data/                           # Archivos de datos de entrada y salida
 │   ├── raw/                        # Datos crudos de origen
-│   │   ├── ventas.csv              # Histórico de ventas semanales
-│   │   ├── productos.csv           # Precios, costos unitarios y costos de almacenamiento
-│   │   ├── inventario.csv          # Niveles actuales de stock por tienda/producto
-│   │   └── plan_pedidos_recomendados.csv # Output generado con el plan de pedidos
+│   │   ├── ventas_historicas.csv   # Histórico de ventas semanales
+│   │   ├── catalogo_productos.csv  # Precios, costos unitarios y costos de almacenamiento
+│   │   ├── inventario_actual.csv   # Niveles actuales de stock por tienda/producto
+│   │   └── maestro_tiendas.csv     # Informacion de las tiendas, ciudad y m2
 │   └── processed/                  # Datos procesados y modulados
 │       └── panel_semanal.parquet   # Data modular procesada para modelado
 │
@@ -23,8 +23,8 @@ supply-chain-optimization/
 │   └── *.cbm                       # Binarios de los modelos entrenados por cuantil
 │
 ├── notebooks/                      # Notebooks de exploración y experimentación
-│   ├── EDA.ipynb                   # Análisis exploratorio de datos
-│   └── Experimentación.ipynb       # Pruebas y entrenamiento de modelos
+│   ├── 01_EDA.ipynb                   # Análisis exploratorio de datos
+│   └── 02_Experimentacion.ipynb       # Pruebas y entrenamiento de modelos
 │
 ├── outputs/                        # Resultados, métricas y predicciones generadas
 │   ├── metrics/                    # Evaluaciones y métricas del modelo
